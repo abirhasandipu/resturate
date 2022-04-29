@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,6 +25,9 @@ Route::get('/dashboard', function () {
 Route::get('home', function () {
     return view('home');
 });
+
+Route::get('users', [UserController::class, 'index']);
+
 
 Route::get('restaurant', function () {
    return view('restaurant');
