@@ -8,6 +8,9 @@ use App\Models\User;
 class UserController extends Controller
 {
     function index() {
-        return User::find(2);
+        $users = User::all();
+        return view("users", [
+            'users' => $users,
+        ]);
     }
 }
