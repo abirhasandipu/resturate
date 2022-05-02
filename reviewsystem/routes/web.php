@@ -18,9 +18,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+//Route::get('/dashboard', function () {
+//    return view('dashboard');
+//})->middleware(['auth'])->name('dashboard');
 
 Route::get('home', function () {
     return view('home');
@@ -28,12 +28,12 @@ Route::get('home', function () {
 
 Route::get('users', [UserController::class, 'index']);
 
-Route::get('getUser/{id}', [UserController::class, 'getUser']);
+Route::get('getuser/{id}', [UserController::class, 'getUser']);
 
 
 
 Route::get('restaurant', function () {
    return view('restaurant');
-})->middleware(['auth'])->name('restaurant');
+});
 
 require __DIR__.'/auth.php';
