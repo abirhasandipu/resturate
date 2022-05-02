@@ -13,4 +13,11 @@ class UserController extends Controller
             'users' => $users,
         ]);
     }
+
+    function getUser($id) {
+        $user = User::find($id);
+        return view("profile", [
+            'user' => $user,
+        ]);
+    }
 }

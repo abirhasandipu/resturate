@@ -28,6 +28,9 @@ Route::get('home', function () {
 
 Route::get('users', [UserController::class, 'index']);
 
+Route::get('getUser/{id}', [UserController::class, 'getUser']);
+
+
 
 Route::get('restaurant', function () {
    return view('restaurant');
